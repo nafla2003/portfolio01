@@ -90,10 +90,22 @@ main {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
   text-decoration: none;
   transition: var(--transition);
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo-text {
+  color: #000000 !important;
+  font-weight: 700;
+}
+
+.logo-emoji {
+  color: var(--primary-color);
+  font-size: 1.3rem;
 }
 
 .logo:hover {
