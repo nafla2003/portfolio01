@@ -122,6 +122,15 @@ h1, h2, h3, h4, h5, h6, .hero-title {
   z-index: 2;
 }
 
+/* Anime.js per-letter animation helpers */
+.ml2 {
+  display: inline-block;
+}
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
 main {
   width: 100%;
 }
