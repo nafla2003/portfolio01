@@ -1,15 +1,429 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seidh Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Fathima Nafla - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <div class="portfolio">
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <a href="#home" class="logo">Nafla.dev</a>
+
+            <nav class="nav">
+              <a href="#home" class="nav-link active" data-section="home">Home</a>
+              <a href="#about" class="nav-link" data-section="about">About</a>
+              <a href="#education" class="nav-link" data-section="education">Education</a>
+              <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+              <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+              <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+              <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              </button>
+
+              <button class="menu-toggle" aria-label="Toggle menu">
+                <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <div class="hero-text">
+                <h1 class="hero-title">
+                  Hi, I'm <span class="highlight">Fathima Nafla</span>
+                </h1>
+                <p class="hero-subtitle">Full Stack Developer & Creative Designer</p>
+                <p class="hero-description">
+                  Passionate about creating beautiful, functional, and user-friendly digital experiences.
+                  Specialized in modern web technologies and responsive design.
+                </p>
+                <div class="hero-buttons">
+                  <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                    Get in Touch
+                  </button>
+                  <button class="btn btn-secondary" onclick="downloadResume()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume
+                  </button>
+                </div>
+                <div class="social-links">
+                  <a href="https://github.com/TMCB-2025" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                  </a>
+                  <a href="mailto:Fathimanafla882@gmail.com" class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="hero-image">
+                <div class="image-placeholder">FN</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="about">
+          <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  I'm a passionate Full Stack Developer based in Galle, Sri Lanka, with a strong foundation in
+                  both front-end and back-end technologies. I love turning complex problems into simple,
+                  beautiful, and intuitive designs.
+                </p>
+                <p>
+                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                  projects, or learning about the latest trends in web development.
+                </p>
+              </div>
+              <div class="about-info">
+                <div class="info-item">
+                  <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <div>
+                    <span class="info-label">Email</span>
+                    <a href="mailto:Fathimanafla882@gmail.com">Fathimanafla882@gmail.com</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <div>
+                    <span class="info-label">Phone</span>
+                    <a href="tel:0759399144">0759399144</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <div>
+                    <span class="info-label">Address</span>
+                    <span>529, Heli Road, Haliwela, Galle</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="education" class="education">
+          <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h3>Bachelor of Science in Computer Science</h3>
+                  <p class="timeline-subtitle">University of Sri Lanka</p>
+                  <p class="timeline-date">2020 - 2024</p>
+                  <p>Focused on web development, software engineering, and database management systems.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h3>Advanced Level Education</h3>
+                  <p class="timeline-subtitle">Mathematics Stream</p>
+                  <p class="timeline-date">2018 - 2020</p>
+                  <p>Specialized in Mathematics, Physics, and Information Technology.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h3>Certifications</h3>
+                  <p class="timeline-subtitle">Online Learning Platforms</p>
+                  <p class="timeline-date">2021 - Present</p>
+                  <ul>
+                    <li>Full Stack Web Development - Udemy</li>
+                    <li>React Advanced Concepts - Coursera</li>
+                    <li>JavaScript Algorithms and Data Structures - freeCodeCamp</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="skills">
+          <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+
+            <div class="skills-grid">
+              <div class="skills-category">
+                <h3 class="skills-category-title">Technical Skills</h3>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">HTML/CSS</span>
+                      <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">JavaScript</span>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">React</span>
+                      <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">TypeScript</span>
+                      <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Node.js</span>
+                      <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Git</span>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <h3 class="skills-category-title">Languages</h3>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Sinhala</span>
+                      <span class="skill-percentage">100%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">English</span>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="projects">
+          <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-number">01</div>
+                <h3 class="project-title">E-Commerce Platform</h3>
+                <p class="project-description">A full-stack e-commerce website with payment integration and user authentication.</p>
+                <div class="project-technologies">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">Stripe</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-number">02</div>
+                <h3 class="project-title">Task Management App</h3>
+                <p class="project-description">Real-time collaborative task management application with drag-and-drop functionality.</p>
+                <div class="project-technologies">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Firebase</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-number">03</div>
+                <h3 class="project-title">Weather Dashboard</h3>
+                <p class="project-description">Interactive weather dashboard with geolocation and 7-day forecast.</p>
+                <div class="project-technologies">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">API Integration</span>
+                  <span class="tech-tag">CSS3</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-number">04</div>
+                <h3 class="project-title">Portfolio Website</h3>
+                <p class="project-description">Responsive personal portfolio with dark mode and smooth animations.</p>
+                <div class="project-technologies">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">CSS3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact">
+          <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">
+              Have a project in mind or just want to say hi? Feel free to reach out!
+            </p>
+
+            <div class="contact-content">
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <input type="text" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Subject" required />
+                </div>
+                <div class="form-group">
+                  <textarea placeholder="Your Message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </form>
+
+              <div class="contact-info">
+                <div class="contact-info-item">
+                  <div class="contact-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Email</h4>
+                    <a href="mailto:Fathimanafla882@gmail.com">Fathimanafla882@gmail.com</a>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Phone</h4>
+                    <a href="tel:0759399144">0759399144</a>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Location</h4>
+                    <p>529, Heli Road<br />Haliwela, Galle</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>GitHub</h4>
+                    <a href="https://github.com/TMCB-2025" target="_blank" rel="noopener noreferrer">
+                      @TMCB-2025
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Fathima Nafla. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
