@@ -17,6 +17,46 @@
   --accent-teal: #14b8a6;
 }
 
+/* Biology section styles */
+.biology {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, rgba(20,184,166,0.03), rgba(16,185,129,0.02));
+}
+.biology .section-title {
+  color: var(--primary-dark);
+}
+.bio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+.bio-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+  border: 1px solid var(--border-color);
+  padding: 1.4rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.bio-card h3 {
+  margin-bottom: 0.6rem;
+  color: var(--primary-color);
+}
+.project-mini {
+  margin-bottom: 0.8rem;
+}
+.project-mini strong { display:block; color:var(--secondary-color); }
+.biology ul { list-style: disc; margin-left: 1.2rem; color: var(--text-dark); }
+
+@media (max-width: 900px) {
+  .bio-grid { grid-template-columns: 1fr; }
+}
+
 .dark {
   --primary-color: #34d399;
   --primary-dark: #10b981;
